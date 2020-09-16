@@ -11,8 +11,8 @@ inCellLines[0] = columns
 
 incells.close()
 
-new = open("77randommolecules.csv","w")
+new = open("76randommoleculesfordocking.csv","w")
 
-new.writelines(inCellLines[0:78])
+new.writelines(inCellLines[0:101])
 
 new.close()
