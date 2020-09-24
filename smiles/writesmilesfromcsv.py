@@ -1,4 +1,4 @@
-csv = open("nsp16ligandsandrandomssmiles.csv","r")
+csv = open("nsp16ligandsandrandoms - 57_57.csv","r")
 
 lines = csv.readlines()
 lines.pop(0)
@@ -9,6 +9,6 @@ for line in lines:
 
 csv.close()
 
-new = open("nsp16ligandsrandomsmiles.txt","w")
+new = open("nsp16ligandsrandomsmiles-57_57.txt","w")
 new.writelines(newlines)
 new.close()
