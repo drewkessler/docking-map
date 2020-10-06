@@ -1,4 +1,4 @@
-meta = open("ribosemethyldrugs6w4hresults.csv","r")
+meta = open("newrandommoleculesdockingresults.csv","r")
 
 lines = meta.readlines()
 newlines = [lines.pop(0)]
@@ -18,6 +18,6 @@ for line in ids.values():
 
 meta.close()
 
-new = open("ribosemethyldrugs6w4hmaximalconformations.csv","w")
+new = open("newrandom6w4hmaximalconformations.csv","w")
 new.writelines(newlines)
 new.close()

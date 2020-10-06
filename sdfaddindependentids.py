@@ -1,11 +1,11 @@
-oldSDF = open("77randommoleulesconformersDWwithnames.sdf","r")
+oldSDF = open("new77randommoleulesconformersDWwithnames.sdf","r")
 
 lines = oldSDF.readlines()
 
 usedIDs = []
 
-lines[0] = "ZINC000014722381conf1\n" #fencepost
-usedIDs.append(["ZINC000014722381",1])
+lines[0] = "ZINC000035999642conf1\n" #fencepost
+usedIDs.append(["ZINC000035999642",1])
 
 for i in range(1,len(lines)-1):
 
@@ -39,6 +39,6 @@ oldSDF.close()
 
 
 
-newSDF = open("77randommoleulesconformersDWwithIDs.sdf","w")
+newSDF = open("new77randommoleulesconformersDWwithIDs.sdf","w")
 newSDF.writelines(lines)
 newSDF.close()

@@ -1,8 +1,8 @@
-oldSDF = open("77randommoleulesconformersDW.sdf","r")
+oldSDF = open("new77randommoleculesconformersDW.sdf","r")
 lines = oldSDF.readlines()
 oldSDF.close()
 
-data = open("77randommolecules.csv","r")
+data = open("new77randommoleculesfordocking.csv","r")
 names = []
 
 for line in (data.readlines()[1:]):
@@ -19,6 +19,6 @@ for i in range(1,len(lines)-1):
         line = names[inDex]+"\n"
     newlines.append(line)
 
-newSDF = open("77randommoleulesconformersDWwithnames.sdf","w")
+newSDF = open("new77randommoleulesconformersDWwithnames.sdf","w")
 newSDF.writelines(newlines)
 newSDF.close()

@@ -1,18 +1,26 @@
 import random
 
-incells = open("C:\\Users\\kessl\\Desktop\\REHS2020\\CODEandDATA\\in-cells.csv","r")
+fda = open("C:\\Users\\kessl\\Desktop\\REHS2020\\CODEandDATA\\in-cells.csv","r")
 
-inCellLines = incells.readlines()
-columns = inCellLines.pop(0)
+fdaLines = fda.readlines()
+columns = fdaLines.pop(0)
 
-random.shuffle(inCellLines)
+random.shuffle(fdaLines)
 
-inCellLines[0] = columns
+fda.close()
 
-incells.close()
+tests = open("Ribose-methyltr-drugs-short - nsp16_4of6_xclvol2.4-select-200.csv","r")
 
-new = open("76randommoleculesfordocking.csv","w")
+newlines = [columns]
 
-new.writelines(inCellLines[0:101])
+for line in tests.readlines()[1:]:
+    for line1 in fdaLines:
+        if line.split(",")[0] != line1.split(",")[1]:
+            newlines.append(line1)
+
+
+new = open("new100randommoleculesfordocking.csv","w")
+
+new.writelines(newlines[0:101])
 
 new.close()

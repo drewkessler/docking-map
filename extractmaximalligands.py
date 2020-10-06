@@ -1,4 +1,4 @@
-meta = open("77randommolecules6w4hresultstotal.csv","r")
+meta = open("newrandom6w4hmaximalconformations.csv","r")
 
 lines = meta.readlines()
 newlines = [lines.pop(0)]
@@ -18,6 +18,6 @@ for line in ids.values():
 
 meta.close()
 
-new = open("77randommolecules6w4hmaximalligands.csv","w")
+new = open("newrandommolecules6w4hmaximalligands.csv","w")
 new.writelines(newlines)
 new.close()
